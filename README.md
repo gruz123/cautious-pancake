@@ -15,7 +15,7 @@ This repo contains Vagrantfile, ansible playbook and related roles for deploying
 Debian with Docker (+ portainer) + openvpn
 
 it's automaticaly send openvpn.conf to telegram
-(for no reason at all)
+(For no reason. At all)
 
 Requirements
 ------------
