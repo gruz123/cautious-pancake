@@ -24,7 +24,6 @@ On host machine must be installed
 * [Vagrant](https://www.vagrantup.com/)
 * [Ansible](https://www.ansible.com/)
 * [LibVirt](https://libvirt.org/)
-* [VirtualBox](https://www.virtualbox.org/)
 
 How to use
 ----------------
