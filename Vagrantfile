@@ -15,8 +15,12 @@ Vagrant.configure("2") do |config|
   #config.vm.network "private_network", ip: "192.168.18.9"
   config.vm.provider :libvirt do |v|
     v.memory = 2048
-  end  
-
+  end 
+  
+  config.vm.provider :libvirt do |domain|
+    domain.driver = 'qemu'
+  end 
+  
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "libvirt-playbook.yml"
     config.vm.network "forwarded_port", guest: 9443, host: 9443, protocol: "tcp"
