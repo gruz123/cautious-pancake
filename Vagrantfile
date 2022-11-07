@@ -13,9 +13,9 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.vm.box_check_update = false
   #config.vm.network "private_network", ip: "192.168.18.9"
-  #for realy slow pc or nested virtualization
+  #if loeading take a lot of time.
   config.vm.boot_timeout = 7200
-  #for realy slow pc or nested virtualization
+  #if loading take a lot of time.
   config.vm.provider :libvirt do |v|
     v.memory = 1024
   end 
