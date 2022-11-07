@@ -5,8 +5,8 @@ TESTWORK
 
 Disclaimer
 ----------------
-The repo is not for production use.
 Only for testing purposes on the local machine and to get familiar with the used stack of the technologies. 
+The repo is not for production use.
 ------------------
 
 Description
@@ -43,7 +43,6 @@ In terminal:
     $ vagrant up
 
 After finishing, portainer is available by URL [http://127.0.0.1:9443](http://127.0.0.1:9443) on the host machine.
-
 
 To delete the virtual machine, enter command (you must be at the same level as the Vagrantfile):
 
