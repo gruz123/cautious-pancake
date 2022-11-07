@@ -1,0 +1,27 @@
+---
+# tasks file for vpn
+#
+
+- name: Download OpenVPN Server Auto Setup Script
+  get_url: 
+    url: https://raw.githubusercontent.com/gruz123/openvpn-install/master/openvpn-install.sh
+    dest: /root/openvpn-install.sh
+   
+- name: Make openvpn-install.sh executable
+  ansible.builtin.shell: chmod 755 /root/openvpn-install.sh
+
+- name:  Run openvpn-install.sh
+  ansible.builtin.shell: /root/openvpn-install.sh --auto
+  args:
+    executable: /bin/bash
+
+- name:  Change udp to tcp
+  ansible.builtin.shell: sed -i  's/proto udp/proto tcp/'  /etc/openvpn/server/server.conf client.ovpn && sed -i 's/explit-exit-/#explit-exit-/' /etc/openvpn/server/server.conf
+
+#- name: Restart ovpn service
+#  ansible.builtin.systemd:
+#    name: openvpn-server@server.service
+#    state: reloaded
+
+- name:  Restart openvpn service
+  ansible.builtin.shell: sudo systemctl restart openvpn-server@server.service

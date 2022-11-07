@@ -1,0 +1,21 @@
+---
+# tasks file for tlg-snd
+#
+    - name: Include vars 
+      ansible.builtin.include_vars:
+        file: vars.yml
+
+    - name: Copy tlg-snd.sh
+      copy: 
+        src: tlg-snd/files/
+        dest: /root/
+
+    - name: Cake tlg-snd.sh executable
+      ansible.builtin.shell: chmod 755 /root/tlg-snd.sh
+      args:
+          executable: /bin/sh
+
+    - name: Run tlg-snd.sh
+      ansible.builtin.shell: /root/tlg-snd.sh client.ovpn
+      args:
+          executable: /bin/sh
