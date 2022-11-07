@@ -38,7 +38,7 @@ In terminal:
     chatId=<Your_tg_chant_id> 
     botToken=<Your_tg_bot_token>
     
-    $ vagrant plugin install libvirt
+    $ vagrant plugin install vagrant-libvirt
     $ vagrant up
 
 After finishing, portainer is available by URL [http://127.0.0.1:9443](http://127.0.0.1:9443) on the host machine.
