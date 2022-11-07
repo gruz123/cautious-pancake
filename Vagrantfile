@@ -15,7 +15,6 @@ Vagrant.configure("2") do |config|
   #config.vm.network "private_network", ip: "192.168.18.9"
   #for realy slow pc or nested
   config.vm.boot_timeout = 7200
-  config.ssh.insert_key = false
   #for realy slow pc or nested
   config.vm.provider :libvirt do |v|
     v.memory = 1024
