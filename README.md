@@ -7,8 +7,6 @@ Disclaimer
 ----------------
 The repo is not for production use.
 Only for testing purposes on the local machine and to get familiar with the used stack of the technologies. 
-
--Artem
 ------------------
 
 Description
