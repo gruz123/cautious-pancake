@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.boot_timeout = 7200
   #if loading take a lot of time.
   config.vm.provider :libvirt do |v|
-    v.memory = 1024
+    v.memory = 2048
   end 
   #for emulation. with kvm faster.
   config.vm.provider :libvirt do |domain|
